@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rome &amp; Florence Pocket Guide</title>
+<meta name="description" content="Phrases, manners and booking rules for Rome and Florence, October 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf6ef;
+    --surface: #ffffff;
+    --ink: #2a2420;
+    --muted: #6e645b;
+    --line: #e7ddd0;
+    --accent: #b5452b;
+    --accent-soft: #f6e3dc;
+    --ok: #2f6b4f;
+    --ok-soft: #e1efe7;
+    --warn: #8a5a0b;
+    --warn-soft: #f7ecd6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1714;
+      --surface: #24201c;
+      --ink: #f1ebe3;
+      --muted: #a89d91;
+      --line: #3a342e;
+      --accent: #e57c5f;
+      --accent-soft: #3d2620;
+      --ok: #7cc4a0;
+      --ok-soft: #1f3329;
+      --warn: #e2b462;
+      --warn-soft: #3a2f1a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.55 Inter, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 48px 0 24px; }
+  .eyebrow {
+    font-size: 12px; font-weight: 600; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--accent);
+  }
+  h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; line-height: 1.15; }
+  h1 { font-size: clamp(32px, 7vw, 46px); margin: 8px 0 12px; }
+  h2 { font-size: 28px; margin: 0 0 4px; }
+  h3 {
+    font-family: Inter, sans-serif; font-size: 12px; font-weight: 600;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
+    margin: 28px 0 10px;
+  }
+  .lede { color: var(--muted); font-size: 17px; margin: 0; }
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap {
+    display: flex; gap: 6px; overflow-x: auto; padding-top: 10px; padding-bottom: 10px;
+    scrollbar-width: none;
+  }
+  nav .wrap::-webkit-scrollbar { display: none; }
+  nav a {
+    flex: none; text-decoration: none; color: var(--ink);
+    font-size: 14px; font-weight: 500;
+    padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line);
+    background: var(--surface);
+  }
+  nav a:hover { border-color: var(--accent); color: var(--accent); }
+  section { padding: 40px 0 8px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  a { color: var(--accent); }
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 14px; padding: 4px 18px;
+  }
+  .timeline .row {
+    display: grid; grid-template-columns: 64px 1fr; gap: 12px;
+    padding: 14px 0; border-bottom: 1px solid var(--line);
+  }
+  .timeline .row:last-child { border-bottom: 0; }
+  .time { font-weight: 600; font-variant-numeric: tabular-nums; color: var(--accent); }
+  .row strong { display: block; }
+  .row p { margin: 2px 0 0; color: var(--muted); font-size: 15px; }
+  .tag {
+    display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .08em;
+    text-transform: uppercase; padding: 2px 8px; border-radius: 6px;
+    background: var(--ok-soft); color: var(--ok); vertical-align: 2px; margin-left: 6px;
+  }
+  .tag.ahead { background: var(--accent-soft); color: var(--accent); }
+  .tag.free { background: var(--ok-soft); color: var(--ok); }
+  .tag.walk { background: var(--line); color: var(--muted); }
+  .note {
+    margin: 16px 0 0; padding: 12px 16px; border-radius: 10px;
+    background: var(--warn-soft); color: var(--ink); font-size: 15px;
+    border-left: 3px solid var(--warn);
+  }
+  ul { padding-left: 20px; margin: 0; }
+  li { margin: 6px 0; }
+  .phrases { display: grid; gap: 10px; }
+  .phrase {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 12px 16px;
+  }
+  .phrase .it { font-family: Fraunces, Georgia, serif; font-size: 20px; font-weight: 600; }
+  .phrase .say { color: var(--accent); font-size: 14px; font-weight: 500; margin-left: 8px; }
+  .phrase p { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+  .script { display: grid; gap: 10px; }
+  .script .line {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 12px 16px;
+  }
+  .script .line .it { font-weight: 600; }
+  .script .line p { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+  .table { display: grid; gap: 0; }
+  .table .r {
+    display: grid; grid-template-columns: 1fr; gap: 4px;
+    padding: 14px 0; border-bottom: 1px solid var(--line);
+  }
+  .table .r:last-child { border-bottom: 0; }
+  .table .r p { margin: 0; color: var(--muted); font-size: 15px; }
+  .table .place { font-weight: 600; }
+  .table .place .tag { margin-left: 8px; }
+  footer { color: var(--muted); font-size: 14px; padding: 40px 0 60px; border-top: 1px solid var(--line); margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="eyebrow">Italy · Oct 2026</div>
+  <h1>Rome &amp; Florence pocket guide</h1>
+  <p class="lede">Phrases, manners and booking rules worth knowing before you land. Both cities run on Central European Time, 7 hours ahead of Houston.</p>
+</header>
+
+<nav aria-label="Sections">
+  <div class="wrap">
+    <a href="#wednesday">Wednesday in Rome</a>
+    <a href="#ghetto">Ghetto lunch</a>
+    <a href="#phrases">Phrases</a>
+    <a href="#phone">Booking by phone</a>
+    <a href="#customs">Customs</a>
+    <a href="#rome">Rome</a>
+    <a href="#florence">Florence</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="wednesday">
+    <h2>Wednesday in Rome</h2>
+    <p class="sub">The plan</p>
+    <div class="card timeline">
+      <div class="row"><div class="time">9:15</div><div><strong>Arrive at the Fiat 500 meeting point</strong><p>Testaccio / Aventine (00153), exact address in the confirmation. Taxi from the center takes 10–15 min.</p></div></div>
+      <div class="row"><div class="time">9:30</div><div><strong>Vintage Fiat 500 self-drive tour <span class="tag">Booked</span></strong><p>About 3 hours: Colosseum, Circus Maximus, Mouth of Truth, Janiculum terrace. Bring your US license and International Driving Permit.</p></div></div>
+      <div class="row"><div class="time">1:00</div><div><strong>Lunch in the Jewish Ghetto</strong><p>Piperno is the pick; reserve ahead. Keep it moderate before dinner. <a href="#ghetto">Where to eat →</a></p></div></div>
+      <div class="row"><div class="time">3:00</div><div><strong>Pantheon <span class="tag">Booked</span></strong><p>Tickets are in your name, so bring matching ID. Espresso nearby after.</p></div></div>
+      <div class="row"><div class="time">4:00</div><div><strong>Keith Haring at Palazzo Braschi</strong><p>Right on Piazza Navona. About an hour, then stroll the piazza.</p></div></div>
+      <div class="row"><div class="time">5:15</div><div><strong>Palazzo Barberini</strong><p>Caravaggio and Raphael's La Fornarina, a few minutes from dinner. Closes at 7.</p></div></div>
+      <div class="row"><div class="time">6:30</div><div><strong>Aperitivo</strong><p>Rooftop by the Spanish Steps, or a bar near Barberini.</p></div></div>
+      <div class="row"><div class="time">7:30+</div><div><strong>Dinner at Colline Emiliane</strong><p>Via degli Avignonesi 22. Phone bookings only: <a href="tel:+39064817538">+39 06 4817538</a>.</p></div></div>
+      <div class="row"><div class="time">10:00+</div><div><strong>Trevi Fountain</strong><p>After 10 PM the basin is free and the crowds thin.</p></div></div>
+    </div>
+    <p class="note">Skip St. Peter's this morning: the Wednesday papal audience closes or restricts the basilica until early afternoon.</p>
+  </section>
+
+  <section id="ghetto">
+    <h2>Lunch in the Ghetto</h2>
+    <p class="sub">Judeo-Roman cooking. Rome's old Jewish quarter, by the Portico d'Ottavia ruins. A short taxi from the end of the Fiat tour, 10 minutes' walk to the Pantheon.</p>
+    <h3>Where to eat</h3>
+    <ul>
+      <li><strong>Piperno.</strong> The pick. Dates to the 1860s, classic dining room on a quiet piazza, known for its carciofi alla giudia. Feels like old Rome, not a tourist strip. Reserve ahead.</li>
+      <li><strong>Nonna Betta.</strong> Kosher and family-run; Anthony Bourdain praised its fried artichokes. Busier with visitors but reliable.</li>
+      <li><strong>Ba'Ghetto.</strong> Judeo-Roman plus some Middle Eastern dishes, on the main street. Backup if Piperno is full.</li>
+      <li><strong>Il Giardino Romano.</strong> Kosher, with a garden dining area. Roman classics like carbonara and fried cod alongside Judeo-Roman dishes.</li>
+    </ul>
+    <h3>What to order</h3>
+    <ul>
+      <li><strong>Carciofi alla giudia:</strong> a whole artichoke fried twice until it opens like a crisp flower. Peak season is late winter to spring, so October ones may be less impressive.</li>
+      <li><strong>Filetti di baccalà</strong> (fried salt-cod fillets) and <strong>fiori di zucca</strong> (stuffed fried zucchini flowers).</li>
+      <li>A Roman pasta (cacio e pepe or amatriciana) if you want one, but dinner is already pasta-heavy.</li>
+    </ul>
+    <h3>Dessert</h3>
+    <ul>
+      <li><strong>Pasticceria Boccione</strong>, the tiny unsigned bakery on the corner of the main street. Get the ricotta and sour-cherry tart. Expect a short line.</li>
+      <li>Kosher places close Friday evening and Saturday for Shabbat. Wednesday is fine.</li>
+    </ul>
+  </section>
+
+  <section id="phrases">
+    <h2>Phrases</h2>
+    <p class="sub">Italian · say it · when</p>
+    <div class="phrases">
+      <div class="phrase"><span class="it">Buongiorno</span><span class="say">bwon-JOR-no</span><p>Good morning / good day. Until mid-afternoon. Say it walking into any shop or bar.</p></div>
+      <div class="phrase"><span class="it">Buonasera</span><span class="say">bwon-ah-SEH-rah</span><p>Good evening. From about 4 PM on.</p></div>
+      <div class="phrase"><span class="it">Ciao</span><span class="say">chow</span><p>Hi / bye. Friends only, or when someone says it to you first.</p></div>
+      <div class="phrase"><span class="it">Per favore</span><span class="say">per fah-VO-reh</span><p>Please.</p></div>
+      <div class="phrase"><span class="it">Grazie / grazie mille</span><span class="say">GRAHT-see-eh / MEE-leh</span><p>Thanks / thanks a lot.</p></div>
+      <div class="phrase"><span class="it">Prego</span><span class="say">PREH-go</span><p>You're welcome. Waiters also use it to mean "go ahead, what can I get you?"</p></div>
+      <div class="phrase"><span class="it">Scusi</span><span class="say">SKOO-zee</span><p>Excuse me. To get attention or apologize.</p></div>
+      <div class="phrase"><span class="it">Permesso</span><span class="say">per-MESS-oh</span><p>Pardon me. Squeezing past someone on a bus or in a doorway.</p></div>
+      <div class="phrase"><span class="it">Vorrei…</span><span class="say">vor-RAY</span><p>I'd like… The polite way to order anything.</p></div>
+      <div class="phrase"><span class="it">Un caffè</span><span class="say">oon kahf-FEH</span><p>An espresso. "Caffè" means espresso by default.</p></div>
+      <div class="phrase"><span class="it">Il conto, per favore</span><span class="say">eel KON-toh</span><p>The check, please. It won't come until you ask.</p></div>
+      <div class="phrase"><span class="it">Quanto costa?</span><span class="say">KWAN-toh KOS-tah</span><p>How much is it?</p></div>
+      <div class="phrase"><span class="it">Dov'è il bagno?</span><span class="say">doh-VEH eel BAN-yo</span><p>Where's the bathroom?</p></div>
+      <div class="phrase"><span class="it">Parla inglese?</span><span class="say">PAR-lah een-GLEH-zeh</span><p>Do you speak English? Lead with a greeting first.</p></div>
+      <div class="phrase"><span class="it">Arrivederci</span><span class="say">ah-ree-veh-DER-chee</span><p>Goodbye. Say it leaving shops and restaurants.</p></div>
+    </div>
+  </section>
+
+  <section id="phone">
+    <h2>Booking by phone</h2>
+    <p class="sub">Many classic restaurants only take reservations by phone. Call right as service opens, when staff aren't slammed.</p>
+    <div class="script">
+      <div class="line"><div class="it">Buonasera, parla inglese?</div><p>Good evening, do you speak English?</p></div>
+      <div class="line"><div class="it">Vorrei prenotare un tavolo per quattro persone, sabato alle venti.</div><p>I'd like to book a table for four, Saturday at 8 PM.</p></div>
+      <div class="line"><div class="it">A che nome? → spell your name slowly. Grazie mille, arrivederci.</div><p>"Under what name?" Then thank them and say goodbye.</p></div>
+    </div>
+    <h3>Numbers, days, times</h3>
+    <ul>
+      <li><strong>2–6:</strong> due, tre, quattro, cinque, sei</li>
+      <li><strong>Days:</strong> martedì, mercoledì, giovedì, venerdì, sabato, domenica</li>
+      <li><strong>Times (24-hour):</strong> alle tredici = 1 PM · alle venti = 8 PM · alle venti e trenta = 8:30 PM</li>
+    </ul>
+  </section>
+
+  <section id="customs">
+    <h2>Customs</h2>
+    <h3>Shops &amp; streets</h3>
+    <ul>
+      <li>Greet on the way in, say goodbye on the way out. Skipping it reads as rude.</li>
+      <li>Don't handle produce or merchandise. Ask, and let the vendor pick.</li>
+      <li>Churches: shoulders and knees covered. Strictly enforced at St. Peter's and the Duomo.</li>
+      <li>Pickpockets work Trevi, the Spanish Steps, the Colosseum, buses and the Metro. Front pockets only.</li>
+    </ul>
+    <h3>Coffee &amp; meals</h3>
+    <ul>
+      <li>Cappuccino is a morning drink. After about 11 AM or after a meal, order <em>un caffè</em>.</li>
+      <li>Standing at the bar is cheaper than sitting. At busy bars, pay at the register first, then hand the receipt to the barista.</li>
+      <li>Meals are long. Nobody rushes you. Ask for the check when you're ready.</li>
+      <li><em>Coperto</em> is a small per-person cover charge on the bill. It's normal.</li>
+      <li>Tipping isn't expected. Round up or leave a few euros for good service.</li>
+      <li>Water: you'll be asked <em>naturale</em> (still) or <em>frizzante</em> (sparkling). Tap water and Rome's street fountains are safe.</li>
+      <li>Pasta: no knife, no spoon, no parmesan on seafood.</li>
+    </ul>
+  </section>
+
+  <section id="rome">
+    <h2>Rome</h2>
+    <p class="sub">Place · tickets · notes</p>
+    <div class="card table">
+      <div class="r"><div class="place">Galleria Borghese <span class="tag ahead">Book ahead</span></div><p>Timed entry only; sells out days ahead. Closed Mondays.</p></div>
+      <div class="r"><div class="place">Vatican Museums <span class="tag ahead">Book ahead</span></div><p>Book the first slot. Closed Sundays except the last Sunday of the month.</p></div>
+      <div class="r"><div class="place">Pantheon <span class="tag ahead">€7, book online</span></div><p>Use <a href="https://www.pantheonroma.com" rel="noopener">pantheonroma.com</a>. Look-alike sites charge €15–30.</p></div>
+      <div class="r"><div class="place">Trevi Fountain <span class="tag free">Free from piazza</span></div><p>€2 to enter the basin, 9 AM–10 PM, card only. Free after 10 PM.</p></div>
+      <div class="r"><div class="place">St. Peter's Basilica <span class="tag free">Free</span></div><p>Separate from the Vatican Museums. Security line; dome climb is extra.</p></div>
+      <div class="r"><div class="place">Palazzo Barberini <span class="tag walk">Walk-up</span></div><p>Caravaggio and Raphael's La Fornarina, near Piazza Barberini.</p></div>
+      <div class="r"><div class="place">Modern art <span class="tag walk">Walk-up</span></div><p>Galleria Nazionale d'Arte Moderna in Villa Borghese park; Keith Haring at Palazzo Braschi by Piazza Navona.</p></div>
+    </div>
+    <ul style="margin-top:16px">
+      <li>No sitting on fountain edges or wading. You can be fined.</li>
+      <li>Vintage Fiat 500 tours (self-drive convoy or chauffeured) are a fun way to see the sights; not for anyone over 1.9 m or 100 kg.</li>
+    </ul>
+  </section>
+
+  <section id="florence">
+    <h2>Florence</h2>
+    <p class="sub">Place · tickets · notes</p>
+    <div class="card table">
+      <div class="r"><div class="place">Uffizi <span class="tag ahead">Book ahead</span></div><p>Timed tickets; sells out.</p></div>
+      <div class="r"><div class="place">Accademia (David) <span class="tag ahead">Book ahead</span></div><p>Timed tickets; sells out.</p></div>
+      <div class="r"><div class="place">Duomo dome climb <span class="tag ahead">Reservation required</span></div><p>Best view in the city. Lots of stairs.</p></div>
+    </div>
+    <h3>Food</h3>
+    <ul>
+      <li><strong>Bistecca alla fiorentina</strong> is priced by weight, usually a kilo or more, for sharing. Served rare (<em>al sangue</em>); don't ask for well-done.</li>
+      <li>Tuscan bread is unsalted on purpose, meant for salty salumi and sauces.</li>
+      <li><strong>Lampredotto</strong> (tripe sandwich from street carts) is the local street food. <strong>Schiacciata</strong> sandwiches are the lunch staple.</li>
+      <li>House wine (<em>vino della casa</em>) is usually good and cheap.</li>
+    </ul>
+    <h3>Rules</h3>
+    <ul>
+      <li>No eating on church steps or monuments. Picnicking in parts of the center, like Via de' Neri, is fined.</li>
+      <li><strong>ZTL:</strong> never drive a rental into the historic center. Cameras fine you automatically, months later.</li>
+      <li>Leather markets by San Lorenzo: haggle at stalls, not in shops.</li>
+    </ul>
+    <h3>Day trip: Motor Valley</h3>
+    <ul>
+      <li>About an hour to Bologna by fast train. From there: Ferrari Museum (Maranello), Lamborghini (Sant'Agata), Pagani (Modena), Ducati (Bologna). Factory tours need advance booking.</li>
+    </ul>
+  </section>
+
+  <footer>Prices and rules checked October 2026. Hours change; confirm on official sites before you go.</footer>
+</main>
+</body>
+</html>
