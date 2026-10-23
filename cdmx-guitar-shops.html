@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CDMX Guitar Shops</title>
+<meta name="description" content="High-end and vintage-leaning guitar shops in Mexico City, from a Polanco base.">
+<meta name="apple-mobile-web-app-title" content="CDMX Guitars">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f3ec; --surface: #ffffff; --ink: #221e1a; --muted: #6b6158;
+    --line: #e4dacb; --accent: #a2421f; --accent-soft: #f4e1d7;
+    --ok: #2f6b4f; --ok-soft: #e1efe7; --warn: #8a5a0b; --warn-soft: #f7ecd6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #171411; --surface: #221e1a; --ink: #f1ebe3; --muted: #a89d91;
+      --line: #3a342e; --accent: #e58a63; --accent-soft: #3d2620;
+      --ok: #7cc4a0; --ok-soft: #1f3329; --warn: #e2b462; --warn-soft: #3a2f1a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.55 Inter, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; gap: 6px; overflow-x: auto; padding-top: 10px; padding-bottom: 10px; scrollbar-width: none; }
+  nav .wrap::-webkit-scrollbar { display: none; }
+  nav a {
+    flex: none; text-decoration: none; color: var(--ink); font-size: 14px; font-weight: 500;
+    padding: 7px 13px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface);
+  }
+  nav a:active { background: var(--accent-soft); }
+  header { padding: 40px 0 20px; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+  h1, h2 { font-family: Fraunces, Georgia, serif; font-weight: 600; line-height: 1.15; }
+  h1 { font-size: clamp(32px, 7vw, 46px); margin: 8px 0 12px; }
+  h2 { font-size: 26px; margin: 0 0 14px; }
+  .lede { color: var(--muted); font-size: 17px; margin: 0; }
+  section { padding: 28px 0 8px; border-top: 1px solid var(--line); margin-top: 20px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 18px; margin-bottom: 14px;
+  }
+  .card.top { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .card h3 { font-family: Fraunces, Georgia, serif; font-size: 21px; font-weight: 600; margin: 0 0 4px; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0 0 10px; }
+  .card p { margin: 0 0 10px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+  .tag { font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 999px; background: var(--ok-soft); color: var(--ok); }
+  .tag.warn { background: var(--warn-soft); color: var(--warn); }
+  .tag.acc { background: var(--accent-soft); color: var(--accent); }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .btn {
+    text-decoration: none; font-size: 14px; font-weight: 600; padding: 9px 14px; border-radius: 10px;
+    background: var(--accent); color: #fff; display: inline-block;
+  }
+  .btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; }
+  tr:last-child td { border-bottom: 0; }
+  ul.tips { padding-left: 20px; margin: 0; }
+  ul.tips li { margin-bottom: 8px; }
+  footer { color: var(--muted); font-size: 13px; padding: 32px 0 48px; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<nav aria-label="Sections">
+  <div class="wrap">
+    <a href="#top-pick">Top pick</a>
+    <a href="#roma-condesa">Roma / Condesa</a>
+    <a href="#hours">Hours</a>
+    <a href="#tips">Tips</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Mexico City · October 2026</div>
+    <h1>Guitar Shops</h1>
+    <p class="lede">High-end and vintage-leaning shops, from the Hyatt Regency in Polanco. There's no true vintage dealer in town, so think Custom Shop room plus a couple of shops worth digging through.</p>
+  </header>
+
+  <section id="top-pick">
+    <h2>Worth the trip</h2>
+    <div class="card top">
+      <h3>Holocausto Music / Fender Custom Shop</h3>
+      <p class="meta">Calle de Bolívar 76, Centro Histórico · ~25–30 min Uber</p>
+      <div class="tags"><span class="tag acc">Fender Custom Shop room</span><span class="tag warn">Call ahead for showroom</span></div>
+      <p>Fender's first Custom Shop showroom in Latin America, on the building's rooftop. It opened as appointment-only, so call before going up. A recent visitor compared the Custom Shop selection to Sound of Music in Germany.</p>
+      <p>Calle Bolívar is the city's guitar street, so walk the block while you're there.</p>
+      <div class="actions">
+        <a class="btn" href="tel:+525557099046">Call +52 55 5709 9046</a>
+        <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Holocausto%20Music%20Fender%20Custom%20Shop&query_place_id=ChIJx2_ultP-0YURQYkPOKuubQM">Map</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="roma-condesa">
+    <h2>Roma / Condesa</h2>
+    <div class="card">
+      <h3>Rock Shop Guitarras</h3>
+      <p class="meta">Av. Insurgentes Sur 357 (upstairs), Condesa · ~15–20 min Uber</p>
+      <div class="tags"><span class="tag">Closest to vintage</span><span class="tag">Vinyl too</span><span class="tag warn">Opens 1 pm</span></div>
+      <p>Small, old-school shop with interesting instruments and records. The owner, Nacho, knows guitars and will hunt down what you're after.</p>
+      <div class="actions">
+        <a class="btn" href="tel:+525554521431">Call</a>
+        <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Rock%20Shop%20Guitarras&query_place_id=ChIJVVVVVT7_0YURIxrPAcJSxw8">Map</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Guitar Gear Roma</h3>
+      <p class="meta">Puebla 400, Roma Norte · ~15 min Uber</p>
+      <div class="tags"><span class="tag">Boutique pedals &amp; amps</span><span class="tag">Try-out rooms</span></div>
+      <p>Spacious, well-lit shop with rooms where you can sit and play through amps and pedals for as long as you want.</p>
+      <div class="actions">
+        <a class="btn" href="tel:+525559225118">Call</a>
+        <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Guitar%20Gear%20Roma&query_place_id=ChIJk77DXqT_0YURvQ76_Ku0s6w">Map</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Faly Music Boutique</h3>
+      <p class="meta">Citlaltépetl 44, Condesa · ~20 min Uber</p>
+      <div class="tags"><span class="tag">New high-end</span><span class="tag">Gibson · PRS</span></div>
+      <p>New premium stock rather than vintage, with good service. Reviewers single out the manager, Eduardo Castro.</p>
+      <div class="actions">
+        <a class="btn" href="tel:+525590015258">Call</a>
+        <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Faly%20Music%20Boutique%20Condesa&query_place_id=ChIJB5f-kXH_0YURuEjpRQksRC8">Map</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="hours">
+    <h2>Hours</h2>
+    <table>
+      <thead><tr><th>Shop</th><th>Mon–Fri</th><th>Sat</th><th>Sun</th></tr></thead>
+      <tbody>
+        <tr><td>Holocausto / Fender CS</td><td>10–7</td><td>10–7</td><td>11–6</td></tr>
+        <tr><td>Rock Shop Guitarras</td><td>1–8 pm</td><td>1–8 pm</td><td>Closed</td></tr>
+        <tr><td>Guitar Gear Roma</td><td>10–7</td><td>11–5</td><td>Closed</td></tr>
+        <tr><td>Faly Music Boutique</td><td>10–6</td><td>10–2</td><td>Closed</td></tr>
+      </tbody>
+    </table>
+    <p class="meta" style="margin-top:10px">Hours from Google Maps as of Oct 23, 2026. Confirm before heading out.</p>
+  </section>
+
+  <section id="tips">
+    <h2>Tips</h2>
+    <ul class="tips">
+      <li><strong>One stop only?</strong> Holocausto, for the Custom Shop room.</li>
+      <li><strong>Pair them up:</strong> Rock Shop and Guitar Gear Roma are close together and easy to fit around the taco tour or dinner in Roma.</li>
+      <li><strong>Sunday:</strong> only Holocausto is open.</li>
+      <li><strong>Flying it home:</strong> keep the receipt, and plan to declare it at US customs on the way back.</li>
+    </ul>
+  </section>
+
+  <footer>
+    Sources: <a href="https://www.guitarinteractivemagazine.com/news/fender-celebrates-grand-opening-of-first-ever-custom-shop-showroom-in-latin-america/">Guitar Interactive</a> ·
+    <a href="https://www.fender.com/newsroom/271555-fender-celebrates-grand-opening-of-first-ever-custom-shop-showroom-in-latin-america/">Fender Newsroom</a> · Google Maps listings and reviews.
+  </footer>
+</div>
+</body>
+</html>
